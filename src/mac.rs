@@ -40,6 +40,11 @@ impl MACAddress {
     pub const fn octets(&self) -> [u8; 6] {
         self.octets
     }
+
+    /// Gets the octets of this MAC address a slice
+    pub const fn as_slice(&self) -> &[u8] {
+        &self.octets
+    }
 }
 
 impl From<[u8; 6]> for MACAddress {
